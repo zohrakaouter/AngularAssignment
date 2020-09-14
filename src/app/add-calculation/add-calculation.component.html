@@ -1,0 +1,38 @@
+<div class="col-md-6">
+    <h2 class="text-center">New calculation</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      
+        <div class="form-group">
+           
+            <input formControlName="calculationid"  name="calculationid" class="form-control" id="calculationid">
+          </div>
+          <div formGroupName="calculation_values">
+      <div class="form-group">
+        
+        <input formControlName="number1" placeholder="number 1" name="number1" class="form-control" type="number" id="number1">
+      </div>
+  
+      <div class="form-group">
+       
+        <input formControlName="number2" placeholder="number 2" name="number2" class="form-control" type="number" id="number2">
+      </div>
+    </div>
+     
+    <div class="form-group">
+     
+        <select class="form-control" id="operation" (change)="selectChangeHandler($event)">
+          <option >addition</option>
+          <option>substraction</option>
+          <option>multiplication</option>
+          <option>division</option>
+        
+        </select>
+      </div>
+     
+    <div class="form-group">
+      <label  name="resultlabel"  > Result : </label> {{result}}
+    </div>
+    
+    <button mat-raised-button color="primary" type="submit" class="button" > Save </button>
+    </form>
+  </div>

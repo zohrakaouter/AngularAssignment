@@ -1,0 +1,34 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="col-md-6">
+    
+    <button class="btn btn-danger" (click)="addCalculation()"> New calculation</button>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">#</th>
+        <th>Values</th>
+        <th>Operation</th>
+        <th>Result</th>
+      
+      </tr>
+      </thead>
+      <tbody>
+        
+      <tr *ngFor="let calculation of calculations">
+        <td class="hidden"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          
+          <button mat-button>
+            <mat-icon>edit</mat-icon>
+          
+        </button>
+            
+        </td>
+      </tr>
+      </tbody>
+    </table>
+   
+  </div>
